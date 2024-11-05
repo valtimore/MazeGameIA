@@ -28,7 +28,7 @@ goal_pos = (2, 0)
 
 # ****************** Aquí se cargan las fotos (CAMBIARLAS LUEGO)
 try:
-    agent_icon = pygame.image.load('agent_icon.png')
+    agent_icon = pygame.image.load('C:/Users/Slayer2024/Desktop/MazeGameIA/agent_icon.png')
     print("Imagen del agente cargada correctamente.")
 except pygame.error as e:
     print(f"Error al cargar la imagen del agente: {e}")
@@ -62,6 +62,7 @@ def bfs(maze, start, goal):
     
     while queue:
         current = queue.popleft()
+        print("nodo", current)
         if current == goal:
             break
         

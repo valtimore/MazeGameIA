@@ -31,20 +31,21 @@ goal_pos = (2, 0)
 try:
     agent_icon = pygame.image.load('agent_icon.png')
     print("Imagen del agente cargada correctamente.")
-except pygame.error as e:
-    print(f"Error al cargar la imagen del agente: {e}")
     
-try:
     cookie_icon = pygame.image.load('cookie_icon.png')
     print("Imagen de la galleta cargada correctamente.")
-except pygame.error as e:
-    print(f"Error al cargar la imagen de la galleta: {e}")
-
-try:
+    
     goal_icon = pygame.image.load('goal_icon.png')
     print("Imagen del objetivo cargada correctamente.")
+    
 except pygame.error as e:
+    print(f"Error al cargar la imagen del agente: {e}")
+    print(f"Error al cargar la imagen de la galleta: {e}")
     print(f"Error al cargar la imagen del objetivo: {e}")
+    
+
+
+    
 
 agent_icon = pygame.transform.scale(agent_icon, (cell_size, cell_size))
 cookie_icon = pygame.transform.scale(cookie_icon, (cell_size, cell_size))
@@ -87,7 +88,7 @@ def dfs_limited(maze, start, goal, depth_limit):
 
         if depth < depth_limit:
             x, y = current
-            for dx, dy in [(0, 1), (1, 0), (0, -1), (-1, 0)]:  # Operadores: derecha, abajo, izquierda, arriba
+            for dx, dy in [(0, -1), (1, 0), (0, 1), (-1, 0)]:  # Operadores: derecha, abajo, izquierda, arriba
                 nx, ny = x + dx, y + dy
                 if 0 <= nx < len(maze) and 0 <= ny < len(maze[0]) and (nx, ny) not in visited:
                     if maze[nx][ny] == 0:  
