@@ -239,8 +239,6 @@ powerUp = False  # Indica si el agente ha pasado por el powerUp
 running = True
 depth_limit = 13  # Límite de profundidad bajo para probar la búsqueda
 
-agent2_path_idx = 0 # Índice para seguir el camino de Agente2
-agent_path_idx = 0  # Índice para seguir el camino del agente
 
 while running:
     screen.fill(WHITE)
