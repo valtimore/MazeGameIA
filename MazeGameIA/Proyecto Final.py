@@ -299,9 +299,9 @@ while running:
     
     # Movimiento de Agente2
     if agent_pos != agent2_pos:
-        #probabilidad de 50% de que Agente2 use amplitud o A*
+        #probabilidad de 60% de que Agente2 use amplitud y 40% de que use A*
 
-        if random.random() < 0.5:
+        if random.random() < 0.6:
             agent2_pos = bfs_amplitude(maze, agent2_pos, agent_pos, agent2_path )
         else:
             agent2_pos = a_star(maze, agent2_pos, agent_pos, powerUp_pos, powerUp)
