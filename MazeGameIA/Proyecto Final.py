@@ -27,7 +27,7 @@ maze = [
 
 # ****************** Donde va a estar nuestro agente y la meta
 agent_pos = (0, 4)
-powerUp_pos = (0, 1)
+powerUp_pos = (1, 1)
 goal_pos = (2, 0)
 agent2_pos = (2,3)
 
@@ -301,9 +301,11 @@ while running:
 
         if random.random() < 0.6:
             agent2_pos = Bamplitud(maze, agent2_pos, agent_pos, agent2_path )
+            print("El agente 2 se mueve usando búsqueda en amplitud.")
         else:
             agent2_pos = a_star(maze, agent2_pos, agent_pos, powerUp_pos, powerUp)
         agent2_path.append(agent2_pos)
+        print("El agente 2 se mueve usando búsqueda A*.")
 
         print(f"agente2 se mueve a la posición: {agent2_pos}\n")
 
