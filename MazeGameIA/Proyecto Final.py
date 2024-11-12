@@ -127,7 +127,7 @@ def manhattan_distance(pos1, pos2):
     return abs(pos1[0] - pos2[0]) + abs(pos1[1] - pos2[1])
 
 # Metodo de busqueda en amplitud
-def Bprofundidad(maze, start, goal, path ):
+def Bamplitud(maze, start, goal, path ):
     queue = deque([start])  # Cola para gestionar los nodos a visitar
     visited = set(path)  # Asegurar que no regrese a nodos ya visitados en `path`
     visited.add(start)   # También marcamos el nodo inicial como visitado
@@ -300,7 +300,7 @@ while running:
         #probabilidad de 60% de que Agente2 use amplitud y 40% de que use A*
 
         if random.random() < 0.6:
-            agent2_pos = Bprofundidad(maze, agent2_pos, agent_pos, agent2_path )
+            agent2_pos = Bamplitud(maze, agent2_pos, agent_pos, agent2_path )
         else:
             agent2_pos = a_star(maze, agent2_pos, agent_pos, powerUp_pos, powerUp)
         agent2_path.append(agent2_pos)
