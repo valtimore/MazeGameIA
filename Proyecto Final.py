@@ -34,16 +34,16 @@ agent2_pos = (2,3)
 
 # ****************** Aquí se cargan las fotos 
 try:
-    agent_icon = pygame.image.load('gon.png')
+    agent_icon = pygame.image.load('assets/gon.png')
     print("Imagen del agente cargada correctamente.")
-    
-    powerUp_icon = pygame.image.load('ramen.png')
+
+    powerUp_icon = pygame.image.load('assets/ramen.png')
     print("Imagen de la galleta cargada correctamente.")
-    
-    goal_icon = pygame.image.load('pitou.png')
+
+    goal_icon = pygame.image.load('assets/pitou.png')
     print("Imagen del objetivo cargada correctamente.")
 
-    agent2_icon = pygame.image.load('killua.png')
+    agent2_icon = pygame.image.load('assets/killua.png')
     print("Imagen del objetivo cargada correctamente.")
     
 except pygame.error as e:
@@ -251,7 +251,7 @@ while running:
     screen.blit(powerUp_icon, (powerUp_pos[1] * cell_size, powerUp_pos[0] * cell_size))
 
     if (agent_pos == powerUp_pos) or (agent2_pos == powerUp_pos):
-        powerUp_icon = pygame.image.load('ramen-empty.png')
+        powerUp_icon = pygame.image.load('assets/ramen-empty.png')
         powerUp_icon = pygame.transform.scale(powerUp_icon, (cell_size, cell_size))
         screen.blit(powerUp_icon, (powerUp_pos[1] * cell_size, powerUp_pos[0] * cell_size)) 
     
@@ -262,10 +262,10 @@ while running:
 
     # Verificar si el agente ha llegado a la meta
     if agent_pos == goal_pos:
-       
-        agent_icon = pygame.image.load('pitou-gon.png')
+
+        agent_icon = pygame.image.load('assets/pitou-gon.png')
         agent_icon = pygame.transform.scale(agent_icon, (cell_size, cell_size))
-        goal_icon = pygame.image.load('pitou-gon.png')
+        goal_icon = pygame.image.load('assets/pitou-gon.png')
         goal_icon = pygame.transform.scale(goal_icon, (cell_size, cell_size))
         screen.blit(goal_icon, (goal_pos[1] * cell_size, goal_pos[0] * cell_size))
         screen.blit(agent_icon, (agent_pos[1] * cell_size, agent_pos[0] * cell_size))
@@ -276,10 +276,10 @@ while running:
     
     # Verificar si Agente2 ha atrapado al agente
     if agent2_pos == agent_pos:
-        agent_icon = pygame.image.load('gon-killua.png')
+        agent_icon = pygame.image.load('assets/gon-killua.png')
         agent_icon = pygame.transform.scale(agent_icon, (cell_size, cell_size))
-        agent2_icon = pygame.image.load('gon-killua.png')
-        agent2_icon = pygame.transform.scale(agent2_icon, (cell_size, cell_size))    
+        agent2_icon = pygame.image.load('assets/gon-killua.png')
+        agent2_icon = pygame.transform.scale(agent2_icon, (cell_size, cell_size))
         screen.blit(agent_icon, (agent_pos[1] * cell_size, agent_pos[0] * cell_size))
         screen.blit(agent2_icon, (agent2_pos[1] * cell_size, agent2_pos[0] * cell_size))
         pygame.display.update()
