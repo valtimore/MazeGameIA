@@ -1,7 +1,7 @@
 import pygame
 from collections import deque
 import random
-
+print(pygame.__version__)
 pygame.init()
 
 # ****************** Ajustes de la ventana y definición de los colores a usar 
