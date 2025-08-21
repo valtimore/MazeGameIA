@@ -67,4 +67,4 @@ The game runs automatically. Agents move according to their search algorithms. W
 
 ## License 📄
 
-This project is licensed under the MIT License. See the [LICENSE.md](LICENSE.md) file for details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
