@@ -67,5 +67,5 @@ El juego se ejecuta automáticamente. Los agentes se mueven según sus algoritmo
 
 ## Licencia 📄
 
-Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE.md](LICENSE.md) para más detalles.
+Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE) para más detalles.
 
